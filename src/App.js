@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Reflux from "reflux";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+// Store
+import QuestionStore from "./stores/QuestionStore";
+
+class App extends Reflux.Component {
+	constructor(props) {
+		super(props);
+		this.stores = [QuestionStore];
+	}
+
+	render() {
+		return <div className="App" />;
+	}
 }
 
 export default App;
