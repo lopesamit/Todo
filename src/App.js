@@ -1,8 +1,10 @@
 import React from "react";
 import Reflux from "reflux";
+import './App.css'
 
 // Store
 import QuestionStore from "./stores/QuestionStore";
+import QuestionComponent from "./components/QuestionComponent";
 
 class App extends Reflux.Component {
 	constructor(props) {
@@ -11,7 +13,9 @@ class App extends Reflux.Component {
 	}
 
 	render() {
-		return <div className="App" />;
+		return <div className="App" >
+		<QuestionComponent/>
+		</div>;
 	}
 }
 

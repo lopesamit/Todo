@@ -1,5 +1,8 @@
 import Reflux from "reflux";
 
-var AgentActions = Reflux.createActions([]);
+var AgentActions = Reflux.createActions([
+    "add",
+    "remove"
+]);
 
 export default AgentActions;
